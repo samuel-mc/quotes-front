@@ -1,0 +1,18 @@
+.quote-container {
+    border: solid 1px rgb(209, 209, 209);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-size: 1.2rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+.quote-author {
+    text-align: right;
+}
+
+.main-quotes_container .title {
+    text-align: center;
+}
+
+
