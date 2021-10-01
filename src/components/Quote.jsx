@@ -1,11 +1,6 @@
 import React from 'react';
 import '../assets/style/Quote.css'
 const Quote = (props) => {
-
-    React.useEffect(() => {
-        console.log(props.quotes)
-    })
-
     return(
         <div className="quote-container">
             <h3 >"{props.quote}"</h3>

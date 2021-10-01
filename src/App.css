@@ -7,6 +7,17 @@
 
 */
 
+
+:root{
+    --ligth-blue: #3CB9FC;
+    --dark-blue: #120052;
+    --ligth-purple: #B537F2;
+    --dark-purple: #8A2BE1;
+    --background-color: #e0e0e0;
+}
+
 body {
+    background-color: var(--background-color);
+    color: var(--ligth-blue);
     font-family: 'Open Sans', sans-serif;
 }
