@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer footerMobile">
             <ul>
-                <li className="footer-item mobile"> <img  src="../home.png" alt="home icon" className="home-image" /> </li>
+                <li className="footer-item mobile"> <i class="fas fa-home"></i> </li>
                 <li className="footer-item mobile"> Frases </li>
                 <li className="footer-item mobile"> Autores </li>
                 <li className="footer-item mobile plusButton"><b> + </b></li>

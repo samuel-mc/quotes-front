@@ -1,12 +1,28 @@
 import React from 'react';
 import '../assets/style/Header.css'
-const Header = () => {
+const Header = ({ setView }) => {
+    const handleClick = (event) => {
+        setView(event.target.id);
+    }
+
     return (
         <header className="header">
             <ul>
-                <li className="header-item desktop"> Inicio </li>
-                <li className="header-item desktop"> Frases </li>
-                <li className="header-item desktop"> Autores </li>
+                <li className="header-item"> 
+                    <span onClick={handleClick} id="home">
+                        Inicio
+                    </span>
+                </li>
+                <li className="header-item">
+                    <span onClick={handleClick} id="quotes">
+                        Frases
+                    </span>
+                </li>
+                <li className="header-item">
+                    <span onClick={handleClick} id="authors">
+                        Autores
+                    </span>
+                </li>
             </ul>
         </header>
     );

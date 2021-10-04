@@ -19,6 +19,7 @@ const useInitialState = (setLoading) => {
     React.useEffect(() =>  {
         setLoading(true);
         fetchApi('http://localhost:3030/quotes/', setQuotes );
+        console.log("Quotes: ", quotes.quotes);
         fetchApi('http://localhost:3030/quotes/random', setQuoteRamdon );
         fetchApi('http://localhost:3030/authors/', setAuthors );
         setLoading(true);

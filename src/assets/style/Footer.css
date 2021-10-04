@@ -2,7 +2,6 @@
     background-color: var(--dark-blue);
     color: #fff;
     font-size: 2rem;
-    position: absolute;
     width: 100%;
     bottom: 0;
 }
@@ -41,17 +40,25 @@
     display: none;
 }
 
+@media(min-width: 320px){
+    .footer {
+        position: fixed;
+    }
+}
+
 @media (min-width: 600px) {
     .mobile {
         display: none;
     }
-
-    .desktop {
-        display: inline-block;
-    }
+    
     .footer {
         font-size: 1.5rem;
         text-align: right;
         padding: 5px;
+        position: relative;
+    }
+
+    .desktop {
+        display: block;
     }
 }

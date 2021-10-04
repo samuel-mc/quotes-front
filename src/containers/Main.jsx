@@ -1,10 +1,12 @@
 import React from 'react';
 import '../assets/style/Main.css'
-const Main = ({ authors, quoteRandom, quoteRandomAuthor }) => {
+const Main = ({ authors, quoteRandom }) => {
 
     return (
         <>
-            <div className="main-quotes">
+            <section className="main-quotes">
+                <button type="button" className="addQuote-button"> Agregar Frase</button>
+
                 <div className="main-quotes-container">
                     <p className="title">Frase Random</p>
                         <>
@@ -21,7 +23,7 @@ const Main = ({ authors, quoteRandom, quoteRandomAuthor }) => {
                             </>
                         }
                 </div>
-            </div>
+            </section>
         </>
     );
 }

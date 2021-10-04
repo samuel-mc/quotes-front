@@ -5,28 +5,37 @@ import useInitialState from './hooks/useInitialState';
 import Loading from './components/Loading';
 import { Header } from './components/Header';
 import { PrincipalContainer } from './components/PrincipalContainer';
-import { Main } from './components/Main';
+import { Main } from './containers/Main';
+import Authors from './containers/Authors';
+import Quotes from './containers/Quotes';
 import { Footer } from './components/Footer';
 
 function App() {
+  const [view, setView] = React.useState("home");
   const [loading, setLoading] =  React.useState(false);
   const { quotes, quoteRandom, authors } = useInitialState(setLoading);
 
-  React.useEffect(() => {
-    console.log(quoteRandom.author);
-  })
-
   return (
     <React.Fragment>
-      <Header />
+      <Header setView={setView} />
       <PrincipalContainer>
-        {loading
-          ? <Loading />
-          : <Main
-            authors={authors}
-            quoteRandom={quoteRandom}
-            quoteRandomAuthor={quoteRandom.author}
+        {
+          loading && <Loading />
+        }
+        {
+          (view === "home" && !loading) &&
+            <Main
+              authors={authors}
+              quoteRandom={quoteRandom}
             />
+        }
+        {
+          (view === "quotes" && !loading) &&
+            <Quotes quotes={quotes} />
+        }
+        {
+          (view === "authors" && !loading) &&
+            <Authors />
         }
       </PrincipalContainer>
 
