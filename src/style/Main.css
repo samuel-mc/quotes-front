@@ -49,6 +49,20 @@
     height: calc(100vh - 20px);
 }
 
+@media (min-width: 320px) {
+    .main-quotes .main-quotes-container .title{
+        font-size: var(--md);
+    }
+    
+    .main-quotes .main-quotes-container .quote{
+        font-size: var(--md);
+    }
+    
+    .main-quotes .main-quotes-container .authors{
+        font-size: var(--md);
+    }
+}
+
 @media (min-width: 600px) {
     .addQuote-button {
         align-self: center;
