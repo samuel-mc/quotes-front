@@ -1,11 +1,20 @@
 import React from 'react';
-import '../assets/style/Quote.css'
-const Quote = (props) => {
+import '../style/Quote.css'
+const Quote = ({ quote }) => {
+
+    const [ like, setLike ] = React.useState("no");
+
+    const hadleLike = () => {
+        like === "no" ? setLike("yes") : setLike("no");
+    }
     return(
         <div className="quote-container">
-            <h3 className="quote">"{props.quote}"</h3>
-            <h4 className="quote-author"> {props.authorName} {props.authorLastName} </h4>
-            <span className="like"><i class="far fa-heart fa-2x"></i></span>
+            <h3 className="quote">"{quote.quote}"</h3>
+            <h4 className="quote-author"> {quote.author.name} {quote.author.last_name} </h4>
+            {like === "no"
+                ? <span className="like"><i class="far fa-heart fa-2x" onClick={hadleLike}></i></span>
+                :<span className="like"><i class="fas fa-heart fa-2x" onClick={hadleLike}></i></span>
+            }
         </div>
     );
 }

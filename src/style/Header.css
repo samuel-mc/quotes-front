@@ -3,7 +3,7 @@
     background-color: #120052;
     display: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: var(--lg);
     transition: all 4s;
     width: 100%;
 }

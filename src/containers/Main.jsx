@@ -1,11 +1,15 @@
 import React from 'react';
-import '../assets/style/Main.css'
-const Main = ({ authors, quoteRandom }) => {
+import '../style/Main.css'
+const Main = ({ authors, quoteRandom, setAddQuote }) => {
+
+    const handleClick= () => {
+        setAddQuote(true);
+    }
 
     return (
         <>
             <section className="main-quotes">
-                <button type="button" className="addQuote-button"> Agregar Frase</button>
+                <button type="button" className="addQuote-button" onClick={handleClick}> Agregar Frase</button>
 
                 <div className="main-quotes-container">
                     <p className="title">Frase Random</p>

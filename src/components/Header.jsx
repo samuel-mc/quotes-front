@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/style/Header.css'
+import '../style/Header.css'
 const Header = ({ setView }) => {
     const handleClick = (event) => {
         setView(event.target.id);

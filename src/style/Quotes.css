@@ -9,14 +9,14 @@
     text-align: center;
     border: none;
     border-radius: 12px;
-    font-size: 1.8rem;
+    font-size: var(--md);
     margin: 20px auto;
     transition: all 0.7s ease;
     padding: 12px;
 }
 
 .input-findAuthor::placeholder {
-    font-size: 1.8rem;
+    font-size: var(--md);
 }
 
 .input-findAuthor:hover{
@@ -51,8 +51,11 @@
     }
 
     .quotes-section .quotes-section-container {
-        margin: 0 auto;
-        width: 70%;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .input-findAuthor{

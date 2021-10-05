@@ -1,4 +1,5 @@
 .quote-container {
+    background-color: var(--white);
     border: solid 1px rgb(209, 209, 209);
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -30,7 +31,7 @@
 
 @media(min-width: 320px){
     .quote-container {
-        font-size: 1.3rem;
+        font-size: var(--sm);
         width: calc(100vw - 24px);
     }
 }
@@ -38,7 +39,7 @@
 @media(min-width: 600px){
     .quote-container {
         font-weight: lighter;
-        font-size: 1.6rem;
-        width: 100%;
+        font-size: var(--md);
+        width: 40%;
     }
 }

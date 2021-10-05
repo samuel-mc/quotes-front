@@ -1,0 +1,26 @@
+.authors-container{
+    background-color: var(--white);
+    border-radius: 12px;
+    color: var(--dark-blue);
+}
+
+@media (min-width: 320px){
+    .authors-container{
+        font-size: var(--md);
+        background-color: var(--white);
+        margin: 32px;
+        padding: 12px;
+    }
+
+    .authors-container ol {
+        margin-left: 16px;
+    }
+}
+
+@media (min-width: 600px) {
+    .authors-container{
+        font-size: var(--lg);
+    }
+    
+
+}

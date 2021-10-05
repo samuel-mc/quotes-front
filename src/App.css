@@ -1,21 +1,19 @@
-/* Colors:
-
-    3CB9FC
-    B537F2
-    8A2BE1
-    120052
-
-*/
-
-
 :root{
+    /* Variables de los colores utilizados */
     --ligth-blue: #3CB9FC;
     --dark-blue: #120052;
     --ligth-purple: #B537F2;
     --dark-purple: #8A2BE1;
     --white: #f3f3f3;
     --background-color: #e0e0e0;
-    --font-family: 'Lato', sans-serif;;
+
+    /* Variable de la fuente utilizada */
+    --font-family: 'Lato', sans-serif;
+
+    /* Varaible del tamaño de la fuente utilizada */
+    --sm: var(--sm);
+    --md: 1.75rem;
+    --lg: 2rem;
 }
 
 body {

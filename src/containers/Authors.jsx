@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import '../style/Authors.css'
 
-const Authors = () => {
+const Authors = ({ authors }) => {
+    React.useEffect(() => {
+        console.log(authors);
+    })
     return (
-        <div>
-            <h1> Authors</h1>
+        <div className="authors-container">
+            <ol>
+                {authors.map((author) =>
+                    <li>{`${author.name} ${author.last_name}`}</li>
+                )}
+            </ol>
         </div>
     )
 }

@@ -8,9 +8,11 @@ import { PrincipalContainer } from './components/PrincipalContainer';
 import { Main } from './containers/Main';
 import Authors from './containers/Authors';
 import Quotes from './containers/Quotes';
+import AddQuote from './components/AddQuote';
 import { Footer } from './components/Footer';
 
 function App() {
+  const [addQuote, setAddQuote] = React.useState(false);
   const [view, setView] = React.useState("home");
   const [loading, setLoading] =  React.useState(false);
   const { quotes, quoteRandom, authors } = useInitialState(setLoading);
@@ -18,6 +20,7 @@ function App() {
   return (
     <React.Fragment>
       <Header setView={setView} />
+
       <PrincipalContainer>
         {
           loading && <Loading />
@@ -27,19 +30,25 @@ function App() {
             <Main
               authors={authors}
               quoteRandom={quoteRandom}
+              setAddQuote={setAddQuote}
             />
         }
         {
           (view === "quotes" && !loading) &&
-            <Quotes quotes={quotes} />
+            <Quotes
+              quotes={quotes}
+              setAddQuote={setAddQuote}
+            />
         }
         {
           (view === "authors" && !loading) &&
-            <Authors />
+            <Authors authors={authors} />
         }
       </PrincipalContainer>
 
-      <Footer />
+      {!!addQuote && <AddQuote setAddQuote={setAddQuote} />}
+
+      <Footer setAddQuote={setAddQuote} setView={setView} />
     </React.Fragment>
   );
 }
