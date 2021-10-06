@@ -18,10 +18,10 @@ const useInitialState = (setLoading) => {
 
     React.useEffect(() =>  {
         setLoading(true);
-        fetchApi('https://quotes-chidas.herokuapp.com/quotes', setQuotes );
+        fetchApi('http://localhost:3030/quotes/', setQuotes );
         console.log("Quotes: ", quotes.quotes);
-        fetchApi('https://quotes-chidas.herokuapp.com/quotes/random', setQuoteRamdon );
-        fetchApi('https://quotes-chidas.herokuapp.com/authors', setAuthors );
+        fetchApi('http://localhost:3030/quotes/random', setQuoteRamdon );
+        fetchApi('http://localhost:3030/authors/', setAuthors );
         setLoading(true);
     }, []);
 
