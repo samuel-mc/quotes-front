@@ -1,17 +1,9 @@
 import React from 'react';
-import { Quote } from '../components/Quote';
 import '../style/Main.css'
 const Main = ({ authors, quoteRandom, setAddQuote }) => {
 
-    const [ like, setLike ] = React.useState(false);
-
-
     const handleClick= () => {
         setAddQuote(true);
-    }
-
-    const hadleLike = () => {
-        setLike(!like);
     }
 
     return (
@@ -24,10 +16,6 @@ const Main = ({ authors, quoteRandom, setAddQuote }) => {
                         <>
                             <q className="quote">{quoteRandom.quote}</q>
                             {quoteRandom.quote && <p className="author">{`${quoteRandom.author.last_name}, ${quoteRandom.author.name}`}</p>}
-                            {!like
-                                ? <span className="like"><i className="far fa-heart fa-3x" onClick={hadleLike}></i></span>
-                                :<span className="like"><i className="fas fa-heart fa-3x" onClick={hadleLike}></i></span>
-                            }
                         </>
                 </div>
                 <div className="main-quotes-container">
