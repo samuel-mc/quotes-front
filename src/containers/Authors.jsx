@@ -9,7 +9,7 @@ const Authors = ({ authors }) => {
         <div className="authors-container">
             <ol>
                 {authors.map((author) =>
-                    <li>{`${author.name} ${author.last_name}`}</li>
+                    <li key={author.id}>{`${author.name} ${author.last_name}`}</li>
                 )}
             </ol>
         </div>

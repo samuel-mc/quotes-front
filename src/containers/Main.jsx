@@ -24,6 +24,7 @@ const Main = ({ authors, quoteRandom, setAddQuote }) => {
                             <>
                                 <p className="authors">1. {authors[0].name} {authors[0].last_name}</p>
                                 <p className="authors">2. {authors[1].name} {authors[1].last_name}</p>
+                                <p className="authors">3. {authors[2].name} {authors[2].last_name}</p>
                             </>
                         }
                 </div>

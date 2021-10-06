@@ -15,7 +15,8 @@ function App() {
   const [addQuote, setAddQuote] = React.useState(false);
   const [view, setView] = React.useState("home");
   const [loading, setLoading] =  React.useState(false);
-  const { quotes, quoteRandom, authors } = useInitialState(setLoading);
+  const [updateData, setUpdateData] = React.useState(false);
+  const { quotes, quoteRandom, authors } = useInitialState(setLoading, updateData, setUpdateData);
 
   return (
     <React.Fragment>
@@ -38,6 +39,7 @@ function App() {
             <Quotes
               quotes={quotes}
               setAddQuote={setAddQuote}
+              setUpdateData={setUpdateData}
             />
         }
         {
@@ -46,7 +48,7 @@ function App() {
         }
       </PrincipalContainer>
 
-      {!!addQuote && <AddQuote setAddQuote={setAddQuote} />}
+      {!!addQuote && <AddQuote setAddQuote={setAddQuote} setUpdateData={setUpdateData} />}
 
       <Footer setAddQuote={setAddQuote} setView={setView} />
     </React.Fragment>

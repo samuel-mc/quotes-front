@@ -1,6 +1,6 @@
 import React from 'react'
 
-const useInitialState = (setLoading) => {
+const useInitialState = (setLoading, updateData) => {
     const [quotes, setQuotes] =  React.useState([]);
     const [quoteRandom, setQuoteRamdon] =  React.useState([]);
     const [authors, setAuthors] =  React.useState();
@@ -18,12 +18,12 @@ const useInitialState = (setLoading) => {
 
     React.useEffect(() =>  {
         setLoading(true);
-        fetchApi('http://localhost:3030/quotes/', setQuotes );
+        fetchApi('https://quotes-chidas.herokuapp.com/quotes/', setQuotes );
         console.log("Quotes: ", quotes.quotes);
-        fetchApi('http://localhost:3030/quotes/random', setQuoteRamdon );
-        fetchApi('http://localhost:3030/authors/', setAuthors );
+        fetchApi('https://quotes-chidas.herokuapp.com/quotes/random', setQuoteRamdon );
+        fetchApi('https://quotes-chidas.herokuapp.com/authors/', setAuthors );
         setLoading(true);
-    }, []);
+    }, [updateData]);
 
     return {
         quotes,

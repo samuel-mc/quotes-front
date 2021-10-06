@@ -2,7 +2,11 @@ import React from 'react'
 import '../style/Quotes.css';
 import { Quote } from '../components/Quote';
 
-const Quotes = ({ quotes, setAddQuote }) => {
+const Quotes = ({ quotes, setAddQuote, setUpdateData }) => {
+
+    React.useEffect(() =>{
+        setUpdateData(false);
+    })
 
     const handleClick = () => {
         setAddQuote(true);
