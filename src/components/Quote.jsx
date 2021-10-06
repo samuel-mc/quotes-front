@@ -12,8 +12,8 @@ const Quote = ({ quote }) => {
             <h3 className="quote">"{quote.quote}"</h3>
             <h4 className="quote-author"> {quote.author.name} {quote.author.last_name} </h4>
             {like === "no"
-                ? <span className="like"><i class="far fa-heart fa-2x" onClick={hadleLike}></i></span>
-                :<span className="like"><i class="fas fa-heart fa-2x" onClick={hadleLike}></i></span>
+                ? <span className="like"><i className="far fa-heart fa-2x" onClick={hadleLike}></i></span>
+                :<span className="like"><i className="fas fa-heart fa-2x" onClick={hadleLike}></i></span>
             }
         </div>
     );

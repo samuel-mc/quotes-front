@@ -23,15 +23,15 @@ const Footer = ({ setAddQuote, setView }) => {
         <footer className="footer footerMobile">
             <ul>
                 <li className="footer-item mobile" onClick={handleClickOnHome}>
-                    <i class="fas fa-home fa-2x"></i>
+                    <i className="fas fa-home fa-2x"></i>
                     <span> Home </span>
                 </li>
                 <li className="footer-item mobile" onClick={handleClickOnQuotes}>
-                    <i class="fas fa-quote-right fa-2x"></i>
+                    <i className="fas fa-quote-right fa-2x"></i>
                     <span> Frases </span>
                 </li>
                 <li className="footer-item mobile" onClick={handleClickOnAuthors}>
-                <i class="fas fa-users fa-2x"></i>
+                <i className="fas fa-users fa-2x"></i>
                     <span> Autores </span>
                 </li>
                 <li className="footer-item mobile plusButton" onClick={handleAdd}><b> + </b></li>

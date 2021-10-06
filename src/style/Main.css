@@ -26,19 +26,12 @@
     text-align: center;
 }
 
-.main-quotes .main-quotes-container .quote{
-    font-size: var(--sm);
-}
 
 .main-quotes .main-quotes-container .author{
     text-align: right;
     margin-right: 24px;
-    font-size: var(--sm);
 }
 
-.main-quotes .main-quotes-container .authors{
-    font-size: var(--sm);
-}
 
 
 .main-quotes {
@@ -58,6 +51,11 @@
         font-size: var(--md);
     }
     
+    .main-quotes .main-quotes-container .author{
+        font-size: var(--md);
+        margin: 8px;
+    }
+
     .main-quotes .main-quotes-container .authors{
         font-size: var(--md);
     }
@@ -100,9 +98,13 @@
     .main-quotes .main-quotes-container .title{
         font-size: var(--lg);
     }
-    
+
     .main-quotes .main-quotes-container .quote{
         font-size: var(--lg);
+    }
+
+    .main-quotes .main-quotes-container .author{
+        font-size: var(--md);
     }
     
     .main-quotes .main-quotes-container .authors{
