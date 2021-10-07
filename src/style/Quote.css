@@ -1,4 +1,4 @@
-.quote-container {
+.quote {
     background-color: var(--white);
     border: solid 1px rgb(209, 209, 209);
     border-radius: 20px;
@@ -8,36 +8,32 @@
     padding: 12px;
 }
 
-.quote{
+.quote__content{
     text-align: center;
 }
 
-.quote-author {
+.quote__author {
     margin: 8px;
     text-align: right;
 }
 
-.main-quotes_container .title {
-    text-align: center;
-}
-
-.like{
+.quote__like{
     margin-left: 20px;
 }
 
-.like:hover{
+.quote__like:hover{
     cursor: pointer;
 }
 
 @media(min-width: 320px){
-    .quote-container {
+    .quote {
         font-size: var(--sm);
         width: calc(100vw - 24px);
     }
 }
 
 @media(min-width: 600px){
-    .quote-container {
+    .quote {
         font-weight: lighter;
         font-size: var(--md);
         width: 40%;

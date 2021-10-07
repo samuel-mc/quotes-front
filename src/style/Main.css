@@ -1,8 +1,16 @@
-.addQuote-button {
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 20px);
+}
+
+.main__button {
     display: none;
 }
 
-.main-quotes .main-quotes-container{
+.main__container{
     border-radius: 32px;
     background:var(--white);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -15,56 +23,53 @@
     width: calc(100vw - 20px);
 }
 
-.main-quotes .main-quotes-container:hover{
+.main__container:hover{
     cursor: pointer;
 }
 
-.main-quotes .main-quotes-container .title{
+.container__title{
     font-size: var(--lg);
     font-weight: bold;
     margin-bottom: 12px;
     text-align: center;
 }
 
-.main-quotes .main-quotes-container .quote{
+.main__quote{
     font-size: var(--sm);
 }
 
-.main-quotes .main-quotes-container .author{
+.quote__autor{
     text-align: right;
     margin-right: 24px;
     font-size: var(--sm);
 }
 
-.main-quotes .main-quotes-container .authors{
+.main__authors{
     font-size: var(--sm);
 }
 
 
-.main-quotes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 20px);
-}
 
 @media (min-width: 320px) {
-    .main-quotes .main-quotes-container .title{
+    .container__title{
         font-size: var(--md);
     }
     
-    .main-quotes .main-quotes-container .quote{
+    .main__quote{
         font-size: var(--md);
     }
     
-    .main-quotes .main-quotes-container .authors{
+    .main__authors{
         font-size: var(--md);
     }
 }
 
 @media (min-width: 600px) {
-    .addQuote-button {
+    .main{
+        height: calc(100vh - 130px);
+    }
+
+    .main__button {
         align-self: center;
         border: none;
         background-color: var(--dark-purple);
@@ -79,7 +84,7 @@
         width: 30%;
     }
 
-    .addQuote-button:hover {
+    .main__button:hover {
         cursor: pointer;
         background-color: var(--ligth-purple);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -87,26 +92,22 @@
                     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     }
     
-    .main-quotes{
-        height: calc(100vh - 130px);
-    }
 
-    .main-quotes .main-quotes-container{
+    .main__container{
         margin: 16px;
         padding: 32px;
         width: 60%;
     }
 
-    .main-quotes .main-quotes-container .title{
+    .container__title{
         font-size: var(--lg);
     }
     
-    .main-quotes .main-quotes-container .quote{
+    .main__quote{
         font-size: var(--lg);
     }
-    
-    .main-quotes .main-quotes-container .authors{
+
+    .main__authors{
         font-size: var(--lg);
     }
-    
 }

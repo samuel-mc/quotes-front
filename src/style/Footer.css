@@ -11,7 +11,7 @@
 
 }
 
-.footer-item{
+.footer__item{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,27 +20,25 @@
     padding: 10px;
 }
 
-.home-image{
-    height: 2rem;
-}
-
-.plusButton {
+.footer__button {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #8A2BE1;
+    border: none;
     border-radius: 50%;
-    bottom: 25px;
+    bottom: 40px;
     box-shadow: #8A2BE1 0px 4px 10px;
+    color: #fff;
     font-size: var(--lg);
-    height: 50px;
-    right: 5px;
+    height: 60px;
+    right: 10px;
     position: absolute;
     transition: transform 1s;
-    width: 50px;
+    width: 60px;
 }
 
-.plusButton:active {
+.footer__button:active {
     transform: rotate(-90deg);
 }
 

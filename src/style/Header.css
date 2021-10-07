@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.header-item {
+.header__item {
     display: inline-block;
     height: 100%;
     margin: 0  16px;
@@ -17,11 +17,11 @@
     width: 150px;
 }
 
-.header-item span {
+.header__item span {
     transition: all 1s ease;
 }
 
-.header-item span:hover {
+.header__item span:hover {
     opacity: 0.5;
     cursor: pointer;
     text-shadow: 0px 0px 20px rgb(255, 255, 255);

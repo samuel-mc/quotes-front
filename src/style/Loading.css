@@ -1,4 +1,4 @@
-.loading-container {
+.loading {
     color: var(--dark-blue);
     display: flex;
     flex-direction: column;
