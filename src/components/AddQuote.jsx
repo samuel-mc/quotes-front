@@ -31,9 +31,9 @@ const AddQuote = ({ setAddQuote, setUpdateData }) => {
     }
 
     return (
-        <div className="addQuote-container">
-            <div className="addQuote-form">
-                <div className="addQuote-form-title">
+        <div className="add-quote">
+            <div className="add-quote__form">
+                <div className="add-quote__title">
                     <h2>Agrega una frase</h2>
                 </div>
                 <form ref={form}>
@@ -54,9 +54,9 @@ const AddQuote = ({ setAddQuote, setUpdateData }) => {
                         id="authorName"
                         placeholder="Apellido"
                     /> <br />
-                    <div className="buttons-container">
-                        <button type="button" className="btn btn-agregar" onClick={handleSubmit}>Agregar</button>
-                        <button type="button" className="btn btn-cancelar" onClick={handleCancel}>Cancelar</button>
+                    <div className="add-quote__buttons">
+                        <button type="button" className="button button--agregar" onClick={handleSubmit}>Agregar</button>
+                        <button type="button" className="button button--cancelar" onClick={handleCancel}>Cancelar</button>
                     </div>
                 </form>
             </div>

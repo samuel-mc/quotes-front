@@ -22,21 +22,23 @@ const Footer = ({ setAddQuote, setView }) => {
     return (
         <footer className="footer footerMobile">
             <ul>
-                <li className="footer-item mobile" onClick={handleClickOnHome}>
+                <li className="footer__item mobile" onClick={handleClickOnHome}>
                     <i className="fas fa-home fa-2x"></i>
                     <span> Home </span>
                 </li>
-                <li className="footer-item mobile" onClick={handleClickOnQuotes}>
+                <li className="footer__item mobile" onClick={handleClickOnQuotes}>
                     <i className="fas fa-quote-right fa-2x"></i>
                     <span> Frases </span>
                 </li>
-                <li className="footer-item mobile" onClick={handleClickOnAuthors}>
+                <li className="footer__item mobile" onClick={handleClickOnAuthors}>
                 <i className="fas fa-users fa-2x"></i>
                     <span> Autores </span>
                 </li>
-                <li className="footer-item mobile plusButton" onClick={handleAdd}><b> + </b></li>
+                <li className="footer__item mobile" onClick={handleAdd}>
+                    <span className="footer__button"> + </span>
+                </li>
 
-                <li className="footer-item desktop"> Un producto de <a href="./"> samuel-mc </a>  </li>
+                <li className="footer__item desktop"> Un producto de <a href="./"> samuel-mc </a>  </li>
 
             </ul>
         </footer>

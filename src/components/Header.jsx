@@ -8,17 +8,17 @@ const Header = ({ setView }) => {
     return (
         <header className="header">
             <ul>
-                <li className="header-item"> 
+                <li className="header__item">
                     <span onClick={handleClick} id="home">
                         Inicio
                     </span>
                 </li>
-                <li className="header-item">
+                <li className="header__item">
                     <span onClick={handleClick} id="quotes">
                         Frases
                     </span>
                 </li>
-                <li className="header-item">
+                <li className="header__item">
                     <span onClick={handleClick} id="authors">
                         Autores
                     </span>

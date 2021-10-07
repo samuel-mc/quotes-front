@@ -4,24 +4,39 @@ import { Quote } from '../components/Quote';
 
 const Quotes = ({ quotes, setAddQuote, setUpdateData }) => {
 
-    React.useEffect(() =>{
-        setUpdateData(false);
-    })
+    const [ searchValue, setSearchValue ] = React.useState("");
+
+    const searchInput = React.useRef(null);
+
+    const handleSearch = React.useCallback(() => {
+        setSearchValue(searchInput.current.value)
+    }, [])
+
+    const filteredUsers = React.useMemo(() => 
+    quotes.quotes.filter((quote) =>{
+            return quote.author.name.toLowerCase().includes(searchValue.toLowerCase()) || quote.author.last_name.toLowerCase().includes(searchValue.toLowerCase())
+        }), [ quotes, searchValue]
+    )
 
     const handleClick = () => {
         setAddQuote(true);
     }
+
     return (
         <>  
-            <section className="quotes-section">
-                <button type="button" className="addQuote-button" onClick={handleClick}> Agregar Frase</button>
+            <section className="quotes">
+                <button type="button" className="main__button" onClick={handleClick}> Agregar Frase</button>
 
-                <input placeholder="Buscar Por Autor" className="input-findAuthor" />
+                <input
+                    placeholder="Buscar Por Autor"
+                    className="quotes__input"
+                    onChange={handleSearch}
+                    ref={searchInput}
+                />
 
-                <div className="quotes-section-container">
-                    {quotes.quotes.map( (quote) => 
+                <div className="quotes__container">
+                    {filteredUsers.map( (quote) => 
                         <Quote
-                            like={"no"}
                             key={quote.id}
                             quote={quote}
                         />

@@ -8,23 +8,23 @@ const Main = ({ authors, quoteRandom, setAddQuote }) => {
 
     return (
         <>
-            <section className="main-quotes">
-                <button type="button" className="addQuote-button" onClick={handleClick}> Agregar Frase</button>
+            <section className="main">
+                <button type="button" className="main__button" onClick={handleClick}> Agregar Frase</button>
 
-                <div className="main-quotes-container">
-                    <p className="title">Frase Random</p>
+                <div className="main__container">
+                    <p className="container__title">Frase Random</p>
                         <>
-                            <q className="quote">{quoteRandom.quote}</q>
-                            {quoteRandom.quote && <p className="author">{`${quoteRandom.author.last_name}, ${quoteRandom.author.name}`}</p>}
+                            <q className="main__quote">{quoteRandom.quote}</q>
+                            {quoteRandom.quote && <p className="quote__autor">{`${quoteRandom.author.last_name}, ${quoteRandom.author.name}`}</p>}
                         </>
                 </div>
-                <div className="main-quotes-container">
-                    <p className="title">Top Autores</p>
+                <div className="main__container">
+                    <p className="container__title">Top Autores</p>
                         {authors &&
                             <>
-                                <p className="authors">1. {authors[0].name} {authors[0].last_name}</p>
-                                <p className="authors">2. {authors[1].name} {authors[1].last_name}</p>
-                                <p className="authors">3. {authors[2].name} {authors[2].last_name}</p>
+                                <p className="main__authors">1. {authors[0].name} {authors[0].last_name}</p>
+                                <p className="main__authors">2. {authors[1].name} {authors[1].last_name}</p>
+                                <p className="main__authors">3. {authors[2].name} {authors[2].last_name}</p>
                             </>
                         }
                 </div>

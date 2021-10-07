@@ -6,7 +6,7 @@ const Authors = ({ authors }) => {
         console.log(authors);
     })
     return (
-        <div className="authors-container">
+        <div className="authors">
             <ol>
                 {authors.map((author) =>
                     <li key={author.id}>{`${author.name} ${author.last_name}`}</li>
