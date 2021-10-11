@@ -1,5 +1,7 @@
 import React from 'react';
-import '../style/AddQuote.css'
+import '../style/AddQuote.css';
+
+const axios = require('axios');
 
 const AddQuote = ({ setAddQuote, setUpdateData }) => {
     const form = React.useRef(null);
@@ -21,12 +23,16 @@ const AddQuote = ({ setAddQuote, setUpdateData }) => {
     }
 
     const postQuote = async (data) => {
-        await fetch('https://quotes-chidas.herokuapp.com/quotes', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+        await axios.post('https://quotes-chidas.herokuapp.com/quotes', {
+            quote: data.quote,
+            name: data.name,
+            last_name: data.last_name,
+        })
+        .then(function (response) {
+        console.log(response);
+        })
+        .catch(function (error) {
+        console.log(error);
         });
     }
 

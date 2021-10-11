@@ -1,5 +1,8 @@
 import React from 'react';
 import '../style/Quote.css'
+
+const axios = require('axios');
+
 const Quote = ({ key, quote }) => {
 
     const [ like, setLike ] = React.useState("no");
@@ -17,15 +20,11 @@ const Quote = ({ key, quote }) => {
     }
 
     const fetchLike = async (id_quote, id_author) => {
-        await fetch(`https://quotes-chidas.herokuapp.com/quotes/like/${id_quote}/${id_author}`, {
-            method: 'PUT',
-        });
+        await axios.put(`https://quotes-chidas.herokuapp.com/quotes/like/${id_quote}/${id_author}`);
     }
     
     const fetchDislike = async (id_quote, id_author) => {
-        await fetch(`https://quotes-chidas.herokuapp.com/quotes/dislike/${id_quote}/${id_author}`, {
-            method: 'PUT',
-        });
+        await axios.put(`https://quotes-chidas.herokuapp.com/quotes/dislike/${id_quote}/${id_author}`);
     }
 
     return(

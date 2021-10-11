@@ -1,4 +1,5 @@
 import React from 'react'
+const axios = require('axios');
 
 const useInitialState = (setLoading, updateData) => {
     const [quotes, setQuotes] =  React.useState([]);
@@ -6,11 +7,13 @@ const useInitialState = (setLoading, updateData) => {
     const [authors, setAuthors] =  React.useState();
 
     const fetchApi = async (url, callback) => {
-        setLoading(true);
-        await fetch(url )
-        .then(response => response.json())
-        .then(json => callback(json))
-        .catch(err => console.log(err))
+        await axios.get(url)
+        .then((response) => {
+            callback(response.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+          })
         .finally(() => {
             setLoading(false);
         })
@@ -19,7 +22,6 @@ const useInitialState = (setLoading, updateData) => {
     React.useEffect(() =>  {
         setLoading(true);
         fetchApi('https://quotes-chidas.herokuapp.com/quotes/', setQuotes );
-        console.log("Quotes: ", quotes.quotes);
         fetchApi('https://quotes-chidas.herokuapp.com/quotes/random', setQuoteRamdon );
         fetchApi('https://quotes-chidas.herokuapp.com/authors/', setAuthors );
         setLoading(true);

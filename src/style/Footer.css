@@ -63,6 +63,7 @@
         text-align: right;
         padding: 5px;
         position: relative;
+        height: 60px;
     }
 
     .desktop {
